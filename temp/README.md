@@ -1,52 +1,64 @@
-# [Light Bootstrap Dashboard Angular CLI](http://lbd-angular2.creative-tim.com/)
-[![version][version-badge]][CHANGELOG]
+# [Material Dashboard Angular - Free Bootstrap Material Design Admin](https://www.creative-tim.com/product/material-dashboard-angular2)[![version][version-badge]][CHANGELOG]
 
-![alt text](src/assets/img/opt_lbd_angular_thumbnail.jpg)
+![alt text](http://s3.amazonaws.com/creativetim_bucket/products/53/original/opt_md_angular_thumbnail.jpg "Material Dashboard Angular Free")
 
-**[Light-Bootstrap-Dashboard-Angular-CLI](http://lbd-angular2.creative-tim.com/)** is an admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 3, using [Light Bootstrap Dashboard](https://www.creative-tim.com/product/light-bootstrap-dashboard2) and it is fully responsive. It comes with a big collections of elements that will offer you multiple possibilities to create the app that best fits your needs. It can be used to create admin panels, project management systems, web applications backend, CMS or CRM.
+**[Material Dashboard Angular](https://www.creative-tim.com/product/material-dashboard-angular2/)** is a free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design. We are very excited to introduce our take on the material concepts through an easy to use and beautiful set of components. Material Dashboard was built over the popular Bootstrap framework and it comes with a couple of third-party plugins redesigned to fit in with the rest of the elements.
 
-The product represents a big suite of front-end developer tools that can help you jump start your project. We have created it thinking about things you actually need in a dashboard. Light Bootstrap Dashboard Angular 2 contains multiple handpicked and optimized plugins. Everything is designed to fit with one another. As you will be able to see, the dashboard you can access on Creative Tim is a customization of this product.
+Material Dashboard makes use of light, surface and movement. The general layout resembles sheets of paper following multiple different layers, so that the depth and order is obvious. The navigation stays mainly on the left sidebar and the content is on the right inside the main panel.
 
-It comes with 6 filter colors for the sidebar (“black”, “azure”,”green”,”orange”,”red”,”purple”) and an option to have a background image.
+This product came as a result of users asking for a material dashboard after we released our successful [Material Kit](http://www.creative-tim.com/product/material-kit). We developed it based on your feedback and it is a powerful bootstrap admin dashboard, which allows you to build products like admin panels, content managements systems and CRMs.
 
-Special thanks go to: Robert McIntosh for the notification system Chartist for the wonderful charts We are very excited to share this dashboard with you and we look forward to hearing your feedback!
+Material Dashboard comes with 5 color filter choices for both the sidebar and the card headers (blue, green, orange, red and purple) and an option to have a background image on the sidebar.
+
+Material Dashboard uses a framework built by our friend [Federico - Bootstrap Material Design](http://fezvrasta.github.io/bootstrap-material-design/), who did an amazing job creating the backbone for the material effects, animations, ripples and transitions. Big thanks to his team for the effort and forward thinking they put into it.
+
+Special thanks go to:
+[Robert McIntosh](https://github.com/mouse0270/bootstrap-notify) for the notification system.
+[Chartist](https://gionkunz.github.io/chartist-js/) for the wonderful charts.
+We are very excited to share this dashboard with you and we look forward to hearing your feedback!
+
+You can find the Github Repo here.
 
 ## Links:
 
-+ [Live Preview](http://lbd-angular2.creative-tim.com/)
-+ [Light Bootstrap Dashboard PRO Angular CLI](https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-angular2/?ref=lbd-angular-cli-free-github) ($49)
++ [Live Preview](https://www.creative-tim.com/product/material-dashboard-angular2)
++ [Material Kit - For Front End Development](http://www.creative-tim.com/product/material-kit?ref=github-md-angular)
 
-## Quick Start:
+## Quick start
 
 Quick start options:
 
-+ [Download from Github](https://github.com/creativetimofficial/light-bootstrap-dashboard-angular/archive/master.zip).
-+ [Download from Creative Tim](https://www.creative-tim.com/product/light-bootstrap-dashboard-angular2).
-+ Clone the repo: `git clone https://github.com/creativetimofficial/light-bootstrap-dashboard-angular.git`.
+- [Download from Github](https://github.com/tiniestory/material-dashboard-angular/archive/master.zip).
+- [Download from Creative Tim](http://www.creative-tim.com/product/material-dashboard-angular2).
+- Clone the repo: `git clone https://github.com/tiniestory/material-dashboard-angular.git`.
 
 ## Terminal Commands
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and angular 4.x.
 
 1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
 2. Open Terminal
 3. Go to your file project
-4. Run in terminal: ```npm install -g @angular/cli```
-5. Then: ```npm install```
-6. And: ```ng serve```
-7. Navigate to `http://localhost:4200/`
+4. Make sure you have installed [Angular CLI](https://github.com/angular/angular-cli) already. If not, please install.
+5. Run in terminal: ```npm install```
+6. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ### What's included
 
 Within the download you'll find the following directories and files:
+
 ```
-light-bootstrap-dashboard-angular-cli
+md-free-angular-cli
+├── CHANGELOG.md
+├── LICENSE.md
 ├── README.md
 ├── angular-cli.json
 ├── documentation
-│   ├── css
-│   ├── js
-│   └── tutorial-lbd-angular2.html
 ├── e2e
 ├── karma.conf.js
+├── package-lock.json
 ├── package.json
 ├── protractor.conf.js
 ├── src
@@ -57,21 +69,41 @@ light-bootstrap-dashboard-angular-cli
 │   │   ├── app.component.ts
 │   │   ├── app.module.ts
 │   │   ├── app.routing.ts
-│   │   ├── home
-│   │   │   ├── home.component.css
-│   │   │   ├── home.component.html
-│   │   │   ├── home.component.spec.ts
-│   │   │   └── home.component.ts
+│   │   ├── components
+│   │   │   ├── components.module.ts
+│   │   │   ├── footer
+│   │   │   │   ├── footer.component.css
+│   │   │   │   ├── footer.component.html
+│   │   │   │   ├── footer.component.spec.ts
+│   │   │   │   └── footer.component.ts
+│   │   │   ├── navbar
+│   │   │   │   ├── navbar.component.css
+│   │   │   │   ├── navbar.component.html
+│   │   │   │   ├── navbar.component.spec.ts
+│   │   │   │   └── navbar.component.ts
+│   │   │   └── sidebar
+│   │   │       ├── sidebar.component.css
+│   │   │       ├── sidebar.component.html
+│   │   │       ├── sidebar.component.spec.ts
+│   │   │       └── sidebar.component.ts
+│   │   ├── dashboard
+│   │   │   ├── dashboard.component.css
+│   │   │   ├── dashboard.component.html
+│   │   │   ├── dashboard.component.spec.ts
+│   │   │   └── dashboard.component.ts
 │   │   ├── icons
 │   │   │   ├── icons.component.css
 │   │   │   ├── icons.component.html
 │   │   │   ├── icons.component.spec.ts
 │   │   │   └── icons.component.ts
-│   │   ├── lbd
-│   │   │   ├── lbd-chart
-│   │   │   │   ├── lbd-chart.component.html
-│   │   │   │   └── lbd-chart.component.ts
-│   │   │   └── lbd.module.ts
+│   │   ├── layouts
+│   │   │   └── admin-layout
+│   │   │       ├── admin-layout.component.html
+│   │   │       ├── admin-layout.component.scss
+│   │   │       ├── admin-layout.component.spec.ts
+│   │   │       ├── admin-layout.component.ts
+│   │   │       ├── admin-layout.module.ts
+│   │   │       └── admin-layout.routing.ts
 │   │   ├── maps
 │   │   │   ├── maps.component.css
 │   │   │   ├── maps.component.html
@@ -82,24 +114,11 @@ light-bootstrap-dashboard-angular-cli
 │   │   │   ├── notifications.component.html
 │   │   │   ├── notifications.component.spec.ts
 │   │   │   └── notifications.component.ts
-│   │   ├── shared
-│   │   │   ├── footer
-│   │   │   │   ├── footer.component.html
-│   │   │   │   ├── footer.component.ts
-│   │   │   │   └── footer.module.ts
-│   │   │   └── navbar
-│   │   │       ├── navbar.component.html
-│   │   │       ├── navbar.component.ts
-│   │   │       └── navbar.module.ts
-│   │   ├── sidebar
-│   │   │   ├── sidebar.component.html
-│   │   │   ├── sidebar.component.ts
-│   │   │   └── sidebar.module.ts
-│   │   ├── tables
-│   │   │   ├── tables.component.css
-│   │   │   ├── tables.component.html
-│   │   │   ├── tables.component.spec.ts
-│   │   │   └── tables.component.ts
+│   │   ├── table-list
+│   │   │   ├── table-list.component.css
+│   │   │   ├── table-list.component.html
+│   │   │   ├── table-list.component.spec.ts
+│   │   │   └── table-list.component.ts
 │   │   ├── typography
 │   │   │   ├── typography.component.css
 │   │   │   ├── typography.component.html
@@ -110,18 +129,18 @@ light-bootstrap-dashboard-angular-cli
 │   │   │   ├── upgrade.component.html
 │   │   │   ├── upgrade.component.spec.ts
 │   │   │   └── upgrade.component.ts
-│   │   └── user
-│   │       ├── user.component.css
-│   │       ├── user.component.html
-│   │       ├── user.component.spec.ts
-│   │       └── user.component.ts
+│   │   └── user-profile
+│   │       ├── user-profile.component.css
+│   │       ├── user-profile.component.html
+│   │       ├── user-profile.component.spec.ts
+│   │       └── user-profile.component.ts
 │   ├── assets
 │   │   ├── css
-│   │   ├── fonts
+│   │   │   └── demo.css
 │   │   ├── img
-│   │   └── sass
-│   │       ├── lbd
-│   │       └── light-bootstrap-dashboard.scss
+│   │   └── scss
+│   │       ├── core
+│   │       └── material-dashboard.scss
 │   ├── environments
 │   ├── favicon.ico
 │   ├── index.html
@@ -129,20 +148,24 @@ light-bootstrap-dashboard-angular-cli
 │   ├── polyfills.ts
 │   ├── styles.css
 │   ├── test.ts
-│   └── tsconfig.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.spec.json
+│   └── typings.d.ts
+├── tsconfig.json
 ├── tslint.json
-└── typings.json
+└── typings
 
 ```
+
 ## Useful Links
 
-More products from Creative Tim: <https://www.creative-tim.com/bootstrap-themes>
+More products from Creative Tim: <http://www.creative-tim.com/bootstrap-themes>
 
 Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
 
-Freebies: <https://www.creative-tim.com/products>
+Freebies: <http://www.creative-tim.com/products>
 
-Affiliate Program (earn money): <https://www.creative-tim.com/affiliates/new>
+Affiliate Program (earn money): <http://www.creative-tim.com/affiliates/new>
 
 Social Media:
 
@@ -158,6 +181,4 @@ Instagram: <https://instagram.com/creativetimofficial>
 
 [CHANGELOG]: ./CHANGELOG.md
 
-[LICENSE]: ./LICENSE
-
-[version-badge]: https://img.shields.io/badge/version-1.4.0-blue.svg
+[version-badge]: https://img.shields.io/badge/version-2.1.0-blue.svg
