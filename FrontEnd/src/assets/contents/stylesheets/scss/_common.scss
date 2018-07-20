@@ -1,0 +1,50 @@
+﻿@font-face {
+    font-family: 'typicons';
+    src: url("/Content/typicons.font-2.0.7/typicons.eot");
+    src: url("/Content/typicons.font-2.0.7/typicons.eot?#iefix") format('embedded-opentype'), url("/Content/typicons.font-2.0.7/typicons.woff") format('woff'), url("/Content/typicons.font-2.0.7/typicons.ttf") format('truetype'), url("/Content/typicons.font-2.0.7/typicons.svg#typicons") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+
+    &.nav-show {
+        .left-side {
+            margin-left: 0;
+
+            .nav-link {
+                padding: .8rem 1rem;
+            }
+
+            .caption {
+                display: inline-block !important;
+            }
+
+            i {
+                margin-left: 0 !important;
+
+                &.fa-calendar-check {
+                    /*margin-left: 155px !important;*/
+                }
+            }
+        }
+
+        .navbar {
+            margin-left: 220px;
+        }
+
+        .right-side {
+            margin-left: 220px;
+        }
+
+        .current-user {
+            .user-name {
+                display: inline-block;
+                margin-left: .5rem;
+            }
+
+            text-align: left;
+        }
+    }
+}
