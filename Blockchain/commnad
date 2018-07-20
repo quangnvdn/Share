@@ -1,0 +1,83 @@
+geth --datadir node1 --port 3001 --rpc --rpcaddr 'localhost' --rpcport 8545 --rpcapi 'personal,db,eth,net,web3,txpool,miner'
+
+geth --datadir node2 --port 3002 --rpc --rpcaddr 'localhost' --rpcport 8546 --rpcapi 'personal,db,eth,net,web3,txpool,miner' --networkid 9876
+
+geth --datadir node3 --port 3003 --rpc --rpcaddr 'localhost' --rpcport 8547 --rpcapi 'personal,db,eth,net,web3,txpool,miner' --networkid 9876
+
+
+geth attach ipc:node1/geth.ipc
+geth attach ipc:node2/geth.ipc
+geth attach ipc:node3/geth.ipc
+
+mist --rpc node1/geth.ipc
+mist --rpc node2/geth.ipc
+mist --rpc node3/geth.ipc
+
+nod1:
+admin.addPeer("enode://fc3c57d5fa1e6326890dcdde46744490986c313ce6b9de7408a54b2caad017200da0eef3044b54546254924d0da40820abca2e0e17b7448c69461bf5a6b03e66@[::]:3002")
+admin.addPeer("enode://4a0bbfa02c034d5737f01e6f1e2fa0b66f5698814322962fb4ea9c73fc0a49c255e4cd29b5eb64746210f154e7634f729837798e779958323762b093910f3c8c@[::]:3003")
+
+nod2
+admin.addPeer("enode://4c717e4ed66ce1c3d78bed9e4a80870af9be04eed1cda211cd96a8a867b9c0f1c850673721230e51fc0b530e3e69dd78a79dc019935d24116eadc7de48daa922@[::]:3001")
+admin.addPeer("enode://4a0bbfa02c034d5737f01e6f1e2fa0b66f5698814322962fb4ea9c73fc0a49c255e4cd29b5eb64746210f154e7634f729837798e779958323762b093910f3c8c@[::]:3003")
+
+nod3
+admin.addPeer("enode://4c717e4ed66ce1c3d78bed9e4a80870af9be04eed1cda211cd96a8a867b9c0f1c850673721230e51fc0b530e3e69dd78a79dc019935d24116eadc7de48daa922@[::]:3001")
+ admin.addPeer("enode://fc3c57d5fa1e6326890dcdde46744490986c313ce6b9de7408a54b2caad017200da0eef3044b54546254924d0da40820abca2e0e17b7448c69461bf5a6b03e66@[::]:3002")
+
+
+
+//clique.propose(0xfb001ca5320d5d50ce00edb728d366c3c671b2d8, true)
+
+personal.unlockAccount(eth.coinbase, "123456", 0)
+miner.setEtherbase(eth.coinbase)
+miner.start()
+
+
+Address: {3082d4a5a00296ef51506c4f1fe795ce287f58fe}
+Address: {c8325a1be3a1f9ac0662a66fc163e06f249b2d6d}
+Address: {f61b39064cf85633a5409b9dfcb4c89145d56e4f}
+networkID:1104
+
+"enode://4c717e4ed66ce1c3d78bed9e4a80870af9be04eed1cda211cd96a8a867b9c0f1c850673721230e51fc0b530e3e69dd78a79dc019935d24116eadc7de48daa922@[::]:3001"
+
+"enode://fc3c57d5fa1e6326890dcdde46744490986c313ce6b9de7408a54b2caad017200da0eef3044b54546254924d0da40820abca2e0e17b7448c69461bf5a6b03e66@[::]:3002"
+
+"enode://4a0bbfa02c034d5737f01e6f1e2fa0b66f5698814322962fb4ea9c73fc0a49c255e4cd29b5eb64746210f154e7634f729837798e779958323762b093910f3c8c@[::]:3003"
+
+
+------------------
+1903  cd dev2
+ 1904  geth --datadir node1 account new
+ 1905  geth --datadir node2 account new
+ 1906  geth --datadir node3 account new
+ 1907  puppeth
+ 1908  geth --datadir node1 init genesis.json
+ 1909  geth --datadir node2 init genesis.json
+ 1910  geth --datadir node3 init genesis.json
+ 1911  nohup geth --datadir node1 --networkid 1104 --port 3001 --rpcaddr 'localhost' --rpc --rpcapi eth,web3 > node1.out &
+ 1912  nano node1.out
+ 1913  nohup geth --datadir node2 --networkid 1104 --port 3002 > node2.out &
+ 1914  nano node2.out
+ 1915  nohup geth --datadir node3 --networkid 1104 --port 3003 > node3.out &
+ 1916  nano node3.out
+ 1917  lsof -t -i:3001
+ 1918  lsof -t -i:3002
+ 1919  lsof -t -i:3003
+ 1920  tail -f node1.out
+ 1921  geth attach ipc:node1/geth.ipc
+ 1922  tail -f node1.out
+ 1923  tail -f node2.out
+ 1924  geth attach ipc:node2/geth.ipc
+ 1925  geth attach ipc:node1/geth.ipc
+ 1926  tail -f node1.out
+ 1927  geth attach ipc:node3/geth.ipc
+
+
+
+
+
+
+
+
+
