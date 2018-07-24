@@ -9,6 +9,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/users/login/login.component';
 import { SignupComponent } from './pages/users/signup/signup.component';
 import { LeftMenuComponent } from './components/left-menu/left-menu.component';
+import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { LeftMenuComponent } from './components/left-menu/left-menu.component';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    LeftMenuComponent
+    LeftMenuComponent,
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
