@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { LoginComponent } from './pages/users/login/login.component';
 import { SignupComponent } from './pages/users/signup/signup.component';
-import { HomeComponent } from './pages/home/home.component'
+import { HomeComponent } from './pages/home/home.component';
+import { RegularClientComponent } from './pages/users/regular-client/regular-client.component'
 //import { AuthGuard } from './_guards/auth.guard';
 import {AuthGuardService as AuthGuard } from './_guards/auth-guard.service';
 
@@ -24,7 +25,12 @@ const routes: Routes = [
     //canActivate: [AuthGuard],
     children: [
       {
-          path: '', component: HomeComponent
+          path: 'order', 
+          component: HomeComponent
+      },
+      {
+        path: 'client',
+        component: RegularClientComponent
       }
   ]
   },

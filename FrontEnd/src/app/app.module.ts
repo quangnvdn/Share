@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/users/login/login.component';
 import { SignupComponent } from './pages/users/signup/signup.component';
 import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { RegularClientComponent } from './pages/users/regular-client/regular-client.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
     LoginComponent,
     SignupComponent,
     LeftMenuComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    RegularClientComponent
   ],
   imports: [
     BrowserModule,
